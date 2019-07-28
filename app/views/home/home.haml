@@ -1,8 +1,29 @@
-%h1 HELLO WORLD
-
 .body
-  .row
-    %h1= "name is #{@char.name}"
+  %h1 Character Status
 
   .row
-    %h1= "Strength is #{@char.strength}"
+    = "Name: #{@char.show_name}"
+
+  .row
+    = "Strength: #{@char.strength}"
+
+  .row
+    = "Dexterity: #{@char.dexterity}"
+
+  .row
+    = "Constitution: #{@char.constitution}"
+
+  .row
+    = "Intelligence: #{@char.intelligence}"
+
+  .row
+    = "Wisdom: #{@char.wisdom}"
+
+  .row
+    = "Charisma: #{@char.charisma}"
+
+  .row
+    = "Level: #{@char.level}"
+
+  .row
+    = "items: #{@char.items.first.name}"
