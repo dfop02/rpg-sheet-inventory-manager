@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @char = Character.first
+    @char = Character.last
     render 'home/home'
   end
 

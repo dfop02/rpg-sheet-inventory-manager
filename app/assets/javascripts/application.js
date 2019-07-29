@@ -4,3 +4,7 @@
 //= require angular
 //= require rails-ujs
 //= require_tree .
+
+$(function() {
+  $(document).foundation();
+});

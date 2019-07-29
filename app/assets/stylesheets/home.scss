@@ -1,10 +1,59 @@
 .body {
   width: 100%;
+  height: 100%;
 
-  .row {
+  .title {
     width: 100%;
-    font-size: 2em;
-    border-bottom: 1px solid #000;
+    font-size: rem-calc(48);
+    text-align: center;
+  }
+
+  .status {
+    width: 10%;
+    float: left;
+    margin-left: rem-calc(32);
+
+    ul {
+      width: 75%;
+      border: 1px solid $black;
+      background-color: $light-gray;
+      padding: 0;
+
+      li {
+        display: flex;
+        font-size: rem-calc(16);
+        justify-content: center;
+
+        &:first-child {
+          border-bottom: none;
+          margin-bottom: 2em;
+        }
+
+        &:last-child {
+          border-top: none;
+        }
+
+        .circle {
+          height: rem-calc(26);
+          width: rem-calc(30);
+          background-color: $white;
+          border: 1px solid $black;
+          border-radius: 50%;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .class_and_race {
+    width: 30%;
+    margin-left: rem-calc(32);
+    float: left;
+
+    .class {
+      border-bottom: 1px solid $black;
+    }
   }
 }
-

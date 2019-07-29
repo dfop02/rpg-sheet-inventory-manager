@@ -1,29 +1,31 @@
 .body
-  %h1 Character Status
+  .title Character Status
 
-  .row
-    = "Name: #{@char.show_name}"
+  .status
+    %ul
+      %li Strength
+      %li
+        .circle= @char.strength
+    %ul
+      %li Dexterity
+      %li
+        .circle= @char.dexterity
+    %ul
+      %li Constitution
+      %li
+        .circle= @char.constitution
+    %ul
+      %li Intelligence
+      %li
+        .circle= @char.intelligence
+    %ul
+      %li Wisdom
+      %li
+        .circle= @char.wisdom
+    %ul
+      %li Charisma
+      %li
+        .circle= @char.charisma
 
-  .row
-    = "Strength: #{@char.strength}"
-
-  .row
-    = "Dexterity: #{@char.dexterity}"
-
-  .row
-    = "Constitution: #{@char.constitution}"
-
-  .row
-    = "Intelligence: #{@char.intelligence}"
-
-  .row
-    = "Wisdom: #{@char.wisdom}"
-
-  .row
-    = "Charisma: #{@char.charisma}"
-
-  .row
-    = "Level: #{@char.level}"
-
-  .row
-    = "items: #{@char.items.first.name}"
+  .class_and_race
+    .class= "Classe: #{@char.character_class.name}"
