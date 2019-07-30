@@ -19,7 +19,9 @@ class CharacterController < ApplicationController
       :intelligence,
       :wisdom,
       :charisma,
-      :level
+      :level,
+      :character_class_id,
+      :character_race_id
     )
   end
 

@@ -1,31 +1,43 @@
-.body
-  .title Character Status
+.expanded.row
+  .columns.small-12
+    .body
+      .title= "#{@char.name} Status"
 
-  .status
-    %ul
-      %li Strength
-      %li
-        .circle= @char.strength
-    %ul
-      %li Dexterity
-      %li
-        .circle= @char.dexterity
-    %ul
-      %li Constitution
-      %li
-        .circle= @char.constitution
-    %ul
-      %li Intelligence
-      %li
-        .circle= @char.intelligence
-    %ul
-      %li Wisdom
-      %li
-        .circle= @char.wisdom
-    %ul
-      %li Charisma
-      %li
-        .circle= @char.charisma
+  .columns.small-2
+    .body
+      .status
+        %ul
+          %li Strength
+          %li
+            .circle= @char.strength
+        %ul
+          %li Dexterity
+          %li
+            .circle= @char.dexterity
+        %ul
+          %li Constitution
+          %li
+            .circle= @char.constitution
+        %ul
+          %li Intelligence
+          %li
+            .circle= @char.intelligence
+        %ul
+          %li Wisdom
+          %li
+            .circle= @char.wisdom
+        %ul
+          %li Charisma
+          %li
+            .circle= @char.charisma
 
-  .class_and_race
-    .class= "Classe: #{@char.character_class.name}"
+  .columns.small-6
+    .body
+      .class_and_race
+        %ul
+          %li
+            .class= "Class: #{@char.character_class.name}"
+          %li
+            .race= "Race: #{@char.character_race.name}"
+          %li
+            .level= "Level: #{@char.level}"

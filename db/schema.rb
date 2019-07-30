@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_000614) do
+ActiveRecord::Schema.define(version: 2019_07_29_171053) do
 
   create_table "character_classes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "strength", default: 0, null: false
+    t.integer "dexterity", default: 0, null: false
+    t.integer "constitution", default: 0, null: false
+    t.integer "intelligence", default: 0, null: false
+    t.integer "wisdom", default: 0, null: false
+    t.integer "charisma", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "character_races", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "strength", default: 0, null: false
     t.integer "dexterity", default: 0, null: false
@@ -34,6 +46,7 @@ ActiveRecord::Schema.define(version: 2019_07_29_000614) do
     t.integer "charisma", default: 0, null: false
     t.integer "level", default: 1, null: false
     t.integer "character_class_id"
+    t.integer "character_race_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -9,7 +9,7 @@
   }
 
   .status {
-    width: 10%;
+    width: 65%;
     float: left;
     margin-left: rem-calc(32);
 
@@ -17,20 +17,22 @@
       width: 75%;
       border: 1px solid $black;
       background-color: $light-gray;
+      @include box-shadow(0px, 0px, 10px, rgba(0, 0, 0, 0.4), false);
+      @include border-radius(rem-calc(12 12 48 48));
       padding: 0;
 
       li {
         display: flex;
         font-size: rem-calc(16);
         justify-content: center;
+        font-family: $status-font;
 
         &:first-child {
-          border-bottom: none;
           margin-bottom: 2em;
         }
 
         &:last-child {
-          border-top: none;
+          font-size: rem-calc(18)
         }
 
         .circle {
@@ -38,9 +40,7 @@
           width: rem-calc(30);
           background-color: $white;
           border: 1px solid $black;
-          border-radius: 50%;
-          -moz-border-radius: 50%;
-          -webkit-border-radius: 50%;
+          @include border-radius(50%);
           text-align: center;
         }
       }
@@ -52,8 +52,16 @@
     margin-left: rem-calc(32);
     float: left;
 
-    .class {
-      border-bottom: 1px solid $black;
+    ul {
+
+      li {
+        display: flex;
+
+        .class, .race, .level{
+          border-bottom: 1px solid $black;
+          font-family: $class-font;
+        }
+      }
     }
   }
 }
