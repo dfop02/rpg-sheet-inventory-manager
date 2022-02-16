@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.6.3'
+ruby '2.7.2'
 
-gem 'after_party'                , '~> 1.10.0'
+gem 'after_party'
 gem 'angularjs-foundation-rails'
 gem 'angularjs-rails'            , '~> 1.6.8'
 gem 'foundation-rails'           , '~> 6.4', '>= 6.4.3.0'
@@ -14,9 +14,9 @@ gem 'jbuilder'                   , '~> 2.5'
 gem 'jquery-rails'
 gem 'nokogiri'
 gem 'mysql2'
-gem 'rails'                      , '~> 5.2.3'
+gem 'rails'                      , '~> 6.1'
 gem 'rails-jquery-autocomplete'
-gem 'sass-rails'                 , '~> 5.0.7'
+gem 'sass-rails'                 , '~> 6.0'
 gem 'uglifier'
 
 group :development, :test do
