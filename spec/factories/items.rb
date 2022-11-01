@@ -1,6 +1,5 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :item do
-    name "MyString"
+    name { 'Item Test' }
   end
-
 end

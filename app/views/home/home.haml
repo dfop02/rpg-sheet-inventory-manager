@@ -6,38 +6,19 @@
   .columns.small-2
     .body
       .status
-        %ul
-          %li Strength
-          %li
-            .circle= @char.strength
-        %ul
-          %li Dexterity
-          %li
-            .circle= @char.dexterity
-        %ul
-          %li Constitution
-          %li
-            .circle= @char.constitution
-        %ul
-          %li Intelligence
-          %li
-            .circle= @char.intelligence
-        %ul
-          %li Wisdom
-          %li
-            .circle= @char.wisdom
-        %ul
-          %li Charisma
-          %li
-            .circle= @char.charisma
+        - t('character.attributes').each do |attribute, locale_name|
+          %ul
+            %li= locale_name
+            %li
+              .circle= @char.send(attribute)
 
   .columns.small-6
     .body
       .class_and_race
         %ul
           %li
-            .class= "Class: #{@char.character_class.name}"
+            .class= "Class: #{@char.class_name}"
           %li
-            .race= "Race: #{@char.character_race.name}"
+            .race= "Race: #{@char.race_name}"
           %li
             .level= "Level: #{@char.level}"

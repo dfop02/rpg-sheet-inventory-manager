@@ -1,28 +1,23 @@
 class CharacterController < ApplicationController
-
   def create
-    @character = Character.new(character_params)
-
-    @character.save
+    @character = Character.create(character_params)
   end
 
   private
 
   def character_params
-    character = params[:character] || {}
-
     params.require(:character).permit(
       :name,
       :strength,
       :dexterity,
-      :constitution,
+      :agility,
       :intelligence,
-      :wisdom,
+      :stamina,
+      :luck,
       :charisma,
       :level,
       :character_class_id,
       :character_race_id
     )
   end
-
 end

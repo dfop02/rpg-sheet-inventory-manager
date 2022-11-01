@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe ItemController, type: :controller do
+RSpec.describe ItemController do
 
 end

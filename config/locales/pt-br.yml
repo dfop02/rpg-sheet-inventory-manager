@@ -1,3 +1,11 @@
-# -*- coding: utf-8 -*-
 pt-BR:
   hello: "Olá mundo"
+  character:
+    attributes:
+      strength: Força
+      dexterity: Destreza
+      agility: Agilidade
+      intelligence: Inteligência
+      luck: Sorte
+      stamina: Estamina
+      charisma: Carisma

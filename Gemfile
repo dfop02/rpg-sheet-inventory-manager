@@ -1,39 +1,54 @@
 source 'https://rubygems.org'
 
-ruby '2.7.2'
+ruby '3.1.2'
 
 gem 'after_party'
 gem 'angularjs-foundation-rails'
-gem 'angularjs-rails'            , '~> 1.6.8'
-gem 'foundation-rails'           , '~> 6.4', '>= 6.4.3.0'
+gem 'angularjs-rails',           '~> 1.6.8'
+gem 'bootsnap', require: false
 gem 'coffee-rails'
 gem 'dotenv-rails'
-gem 'haml'
+gem 'foundation-rails',          '~> 6.6.2'
 gem 'haml-rails'
-gem 'jbuilder'                   , '~> 2.5'
+gem 'importmap-rails'
+gem 'jbuilder',                  '~> 2.11'
 gem 'jquery-rails'
-gem 'nokogiri'
 gem 'mysql2'
-gem 'rails'                      , '~> 6.1'
-gem 'rails-jquery-autocomplete'
-gem 'sass-rails'                 , '~> 6.0'
+gem 'nokogiri'
+gem 'puma',                      '~> 6.0'
+gem 'rails',                     '~> 7.0.4'
+gem 'sassc-rails'
+gem 'sprockets-rails'
+gem 'turbo-rails'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier'
 
 group :development, :test do
-  gem 'factory_girl_rails' , '~> 4.5.0'
-  gem 'guard-rspec'        , '~> 4.6.4', require: false
-  gem 'pry-byebug'         , '~> 3.6.0'
-  gem 'rspec-rails'        , '~> 3.8.0'
+  gem 'factory_bot_rails', '~> 6.2.0'
+  gem 'faker'
+  gem 'pry-byebug',        '~> 3.6.0'
+  gem 'rspec-rails',       '~> 6.0'
 end
 
 group :development do
-  gem 'listen'                , '>= 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen' , '~> 2.0.0'
-  gem 'web-console'           , '>= 3.3.0'
+  gem 'brakeman'
+  gem 'letter_opener'
+  gem 'listen',                '>= 3.0.5'
+  gem 'spring',                '~> 4.1.0'
+  gem 'spring-watcher-listen', '~> 2.1.0'
+  gem 'web-console',           '>= 3.3.0'
 end
 
 group :test do
-  gem 'capybara'                 , '>= 3.22'
-  gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
+  gem 'simplecov',                 require: false
+  gem 'simplecov-formatter-badge', require: false
+  gem 'super_diff'
+end
+
+group :rubocop do
+  gem 'rubocop',             require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails',       require: false
+  gem 'rubocop-rspec',       require: false
 end

@@ -4,7 +4,6 @@ capybara-*.html
 /log
 /tmp
 /public/system
-/coverage/
 /spec/tmp
 *.orig
 rerun.txt
@@ -14,6 +13,8 @@ config/initializers/secret_token.rb
 config/master.key
 
 .env.*
+
+.DS_Store
 
 /.bundle
 /vendor/bundle
@@ -26,3 +27,7 @@ bower.json
 .powenv
 
 node_modules/
+
+# Ignore simplecov
+coverage/*
+!/coverage/coverage.svg
